@@ -1,4 +1,4 @@
-# hw01-module2
+# hw01-module2-additional
 STEP 1
 Write a bash script which will print date to output before starting the app, run container and mount that file, specify it as entrypoint of the container, if it works fine, add as default entrypoint in Dockerfile
 ![alt text](<screenshots/Знімок екрана з 2024-02-15 00-44-03.png>)
@@ -17,6 +17,11 @@ Adjust Dockerfile and add health checks to make sure the app is alive, use the /
 
 STEP 3
 Add /uuid location to the app which will return generated uuid values {"uuid": "XXXXX"}, install and use the uuid module for that
+![alt text](<screenshots/Знімок екрана з 2024-02-15 01-39-09.png>)
+![alt text](<screenshots/Знімок екрана з 2024-02-15 01-39-18.png>)
+![alt text](<screenshots/Знімок екрана з 2024-02-15 01-40-14.png>)
+![alt text](<screenshots/Знімок екрана з 2024-02-15 01-43-07.png>)
+
 
 STEP 4
 Create a new file Dockerfile.generator where install app using these instructions, run it and confirm that app works in your browser, if possible use port 8080

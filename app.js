@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { mainController, healthzController } = require("./controllers");
+const { mainController, healthzController, uuidController } = require("./controllers");
 
 const colors = require("colors");
 colors.enable();
@@ -15,6 +15,7 @@ app.use(express.json())
 // ==================================== ROUTES =========================================
 app.get("/", mainController);
 app.get("/healthz", healthzController);
+app.get("/uuid", uuidController);
 
 // ================================ ERROR CATCHERS =====================================
 app.use((req, res) => {
