@@ -1,0 +1,26 @@
+FROM nodejs-app:latest
+
+LABEL version="1.0"
+LABEL description="Backend application created by Express generator"
+LABEL endpoint1="/"
+LABEL endpoint2="/users"
+
+WORKDIR /webapps/express_generator
+
+# ARG PORT
+
+# ENV PORT=${PORT}
+
+EXPOSE 3000
+
+RUN groupadd -r serg && useradd -r -g serg -d /webapps/express_generator -s /sbin/nologin -c "Docker image user" serg
+
+RUN chown -R serg:serg /webapps/express_generator
+
+COPY install_express.sh /install_express.sh
+
+RUN chmod +x /install_express.sh
+
+HEALTHCHECK --interval=30s --timeout=5s CMD curl -fs http://127.0.0.1:3000 || exit 1
+
+ENTRYPOINT ["/install_express.sh"]
