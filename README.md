@@ -25,3 +25,4 @@ Add /uuid location to the app which will return generated uuid values {"uuid": "
 
 STEP 4
 Create a new file Dockerfile.generator where install app using these instructions, run it and confirm that app works in your browser, if possible use port 8080
+![alt text](<screenshots/Знімок екрана з 2024-02-15 00-44-03.png>)

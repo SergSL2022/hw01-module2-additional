@@ -7,10 +7,6 @@ LABEL endpoint2="/users"
 
 WORKDIR /webapps/express_generator
 
-# ARG PORT
-
-# ENV PORT=${PORT}
-
 EXPOSE 3000
 
 RUN groupadd -r serg && useradd -r -g serg -d /webapps/express_generator -s /sbin/nologin -c "Docker image user" serg
